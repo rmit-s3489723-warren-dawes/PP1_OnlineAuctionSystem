@@ -30,6 +30,14 @@ CREATE TABLE `items` (
   `item_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `Item_description` varchar(255) NOT NULL,
+    `Item_type` varchar(255) ,
+    `Item_headline` varchar(255) ,
+    `Item_Image` varchar(255) ,
+    `Item_Featured_Image_1` varchar(255) ,
+    `Item_Featured_Image_2` varchar(255) ,
+    `Item_Featured_Image_3` varchar(255) ,
+    `note` varchar(255) ,
+    `Buy_now_price` float DEFAULT NULL,
   `Minimum_bid` float DEFAULT NULL,
   `State` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
