@@ -14,7 +14,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
+   
+    
+   <script type="text/javascript">
     
     function validatePassword()
         {
@@ -78,16 +80,65 @@
     </div>
 </nav>
 
+    
+    
+        
 <div class="container" style="margin-top:5em; margin-bottom:5em">
-
-  <!-- page header -->
-  <div class="page-header text-center">
-      <h2>Become a seller</h2>
+  <!-- page header -->  
+<div class="page-header text-center">
+      <h2>Edit User</h2>
   </div>
+    
+    
+    
+    
+    
+    <!-- Form Start -->
+    
 
-  <!--become a seller form-->
-  <form class="form-horizontal col-sm-offset-3 col-sm-6" role="form" action="newUser.php" method="post" onsubmit="return validatePassword()">
+     <!--become a seller form-->
+  <form class="form-horizontal col-sm-offset-3 col-sm-6" role="form" action="test.php" method="post" onsubmit="return validatePassword()">
 
+
+        <!--username  input-->
+      <div class="form-group">
+          <label class="col-sm-3 control-label">
+          	UserName
+          </label>
+          <div class="col-sm-9">
+              <input type="text" name="username" placeholder="userName" class="form-control" autofocus required>
+          </div>
+      </div>
+
+			<!--email input-->
+      <div class="form-group">
+          <label class="col-sm-3 control-label">
+          	Email
+          </label>
+          <div class="col-sm-9">
+              <input type="email" name="email" placeholder="Email" class="form-control" autofocus required>
+          </div>
+      </div>
+
+			<!--password input-->
+      <div class="form-group">
+          <label class="col-sm-3 control-label">
+          	Password
+          </label>
+          <div class="col-sm-9">
+              <input type="password" name="password" placeholder="Password" class="form-control" id="password" autofocus required>
+          </div>
+      </div>
+
+			<!--confirm password input-->
+      <div class="form-group">
+          <label class="col-sm-3 control-label">
+          	Confirm password
+          </label>
+          <div class="col-sm-9">
+              <input type="password" name="confirmPassword" placeholder="Confirm Password" class="form-control" id="repeatPassword" autofocus required>
+          </div>
+      </div>
 
 	  <!--first name input-->
       <div class="form-group">
@@ -118,13 +169,13 @@
               <div class="row">
                   <div class="col-sm-4">
                       <label class="radio-inline">
-                          <input type="radio" name="gender" value="Female">
+                          <input type="radio" name="gender"  value="Female">
                           Female
                       </label>
                   </div>
                   <div class="col-sm-4">
                       <label class="radio-inline">
-                          <input type="radio" name="gender" value="Male">
+                          <input type="radio" name="gender" value="Male" >
                           Male
                       </label>
                   </div>
@@ -221,38 +272,25 @@
           </div>
       </div>
 
-	    <!-- "accept terms" checkbox-->
+
+
+    
+    
+    	    <!-- submit-->
       <div class="form-group">
           <div class="col-sm-9 col-sm-offset-3">
-              <div class="checkbox">
-                  <label>
-                      <input type="checkbox" autofocus required>
-                      I accept <a href="#">terms</a>
-                  </label>
-              </div>
+              <button type="submit" class="btn btn-primary btn-block">Update</button>
           </div>
       </div>
+      
+      
+    </form>
+    
+    
 
-	    <!-- submit-->
-      <div class="form-group">
-          <div class="col-sm-9 col-sm-offset-3">
-              <button type="submit" class="btn btn-primary btn-block">Start selling</button>
-          </div>
-      </div>
+    
+    
 
-  </form>
-</div>
-
-</body>
-
-<div class="container">
-	<div class="row">
-	    <div class="col-xs-12">
-	        <footer class="navbar-fixed-bottom" style="background-color:black">
-	            <p style="color: white">&copy; Copyright 2016 RMIT</p>
-	        </footer>
-	    </div>
 	</div>
-</div>
-
+    </body>
 </html>
