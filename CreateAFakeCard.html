@@ -103,7 +103,7 @@
 				</select>
 			</div>
 			<div class="col-xs-6">
-				<input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name">	
+				<input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name" required>	
 			</div>
 			
 		</div>
@@ -113,7 +113,7 @@
 				Card Type
 			</label>
 			<div class="col-sm-9">
-				<select name="country" class="form-control">
+				<select name="country" class="form-control" required>
 					<option>Credit Card</option>
 					<option>Master Card</option>
 					<option>Paypass</option>
@@ -128,16 +128,16 @@
 				Card Number
 			</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number">
+				<input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number" required>
 			</div>
 		</div>
 		<!-- card balance input-->
 		<div class="form-group">
 			<label class="col-sm-3 control-label" for="card-balance">
-				Card balance
+				Input balance
 			</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control" name="card-balance" id="card-balance" placeholder="How much you have in the card">
+				<input type="text" class="form-control" name="card-balance" id="card-balance" placeholder="How much you have in the card" required>
 			</div>
 		</div>
 		<!-- Expiration Date input-->
@@ -149,8 +149,8 @@
 				<div class="row">
 
 					<div class="col-xs-4">
-						<select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
-							<option>Month</option>
+						<select class="form-control col-sm-2" name="expiry-month" id="expiry-month" required>
+							<option required>Month</option>
 							<option value="01">Jan (01)</option>
 							<option value="02">Feb (02)</option>
 							<option value="03">Mar (03)</option>
@@ -166,7 +166,7 @@
 						</select>
 					</div>
 					<div class="col-xs-4">
-						<select class="form-control" name="expiry-year">
+						<select class="form-control" name="expiry-year" required>
 							<option value="13">2023</option>
 							<option value="14">2024</option>
 							<option value="15">2025</option>
@@ -190,7 +190,7 @@
 				Card CVV
 			</label>
 			<div class="col-sm-4">
-				<input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code">
+				<input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code" required>
 			</div>
 		</div>
 	<!---->
