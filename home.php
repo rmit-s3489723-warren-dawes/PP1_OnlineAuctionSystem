@@ -1,9 +1,4 @@
-<?php
-session_start();
-if(isset($_SESSION['username']))
-{
-    //Welcome 
-   $page= <<<HEREDOC
+
     <!DOCTYPE html>
 <html lang="en">
 
@@ -38,11 +33,11 @@ if(isset($_SESSION['username']))
                     <ul class="nav nav-pills pull-right" style="margin-top: 5px;">
 
                         <li class="dropdown">
-HEREDOC;
+
     
-    $page2= '<p class="navbar-brand" href="#" style="color:white">Welcome '.$_SESSION['username'].'</p>';
+<p class="navbar-brand" href="#" style="color:white">Welcome '.$_SESSION['username'].'</p>';
                           
-    $page3= <<<HEREDOC
+
                             <div class="dropdown-menu" style="padding:17px;">
 
                             </div>
@@ -82,15 +77,5 @@ HEREDOC;
 
 </body>
 </html>
-HEREDOC;
-    
-    echo $page;
-     echo $page2;
-     echo $page3;
-    
-}else{
-   // echo "redirect";
-    header("Location: index.php");
-    die();
-}
-?>
+
+
