@@ -107,6 +107,7 @@
 			</div>
 			
 		</div>
+
 		<!-- card type input-->
 		<div class="form-group">
 			<label class="col-sm-3 control-label">
@@ -121,6 +122,18 @@
 				</select>
 			</div>
 		</div>
+
+		<!-- balance input-->
+		<div class="form-group">
+			<label class="col-sm-3 control-label" for="card-number">
+				Balance
+			</label>
+			<div class="col-sm-9">
+				<input type="text" class="form-control" placeholder="balance" required />
+			</div>
+		</div>
+
+
 		<!-- card number input-->
 		<div class="form-group">
 			<label class="col-sm-3 control-label" for="card-number">
@@ -133,9 +146,8 @@
 				  <input class="col-sm-2 col-sm-offset-1" type="text" maxlength="4" pattern="\d{4}" title="Third four digits" required>
                   <input class="col-sm-2 col-sm-offset-1" type="text" maxlength="4" pattern="\d{4}" title="Fourth four digits" required>
 			</div>
-
-
 		</div>
+
 		<!-- Expiration Date input-->
 		<div class="form-group">
 			<label class="col-sm-3 control-label" for="expiry-month">
@@ -180,17 +192,17 @@
 				</div>
 			</div>
 		</div>
+
 		<!-- Card CVV input-->
 		<div class="form-group">
 			<label class="col-sm-3 control-label" for="cvv">
 				Card CVV
 			</label>
 			<div class="col-sm-4">
-				<input type="text" class="form-control" maxlength="3" pattern="\d{3}" name="cvv" id="cvv" placeholder="Security Code">
+				<input type="text" class="form-control" maxlength="3" pattern="\d{3}" name="cvv" id="cvv" placeholder="Security Code" required>
 			</div>
 		</div>
 	<!---->
-
 
 	<!-- "accept terms" checkbox-->
 	<div class="form-group">
