@@ -103,7 +103,7 @@
 				</select>
 			</div>
 			<div class="col-xs-6">
-				<input type="text" class="form-control" name="card-holder-name" id="card-holder-name" placeholder="Card Holder's Name" required>	
+				<input type="text" class="form-control" pattern="\w+ \w+.*" name="card-holder-name" id="card-holder-name" placeholder="E.g David Yao" required>	
 			</div>
 			
 		</div>
@@ -113,10 +113,9 @@
 				Card Type
 			</label>
 			<div class="col-sm-9">
-				<select name="country" class="form-control" required>
+				<select name="country" class="form-control">
 					<option>Credit Card</option>
 					<option>Master Card</option>
-					<option>Paypass</option>
 					<option>Debit Card</option>
 					<option>UnionPay</option>
 				</select>
@@ -128,17 +127,14 @@
 				Card Number
 			</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control" name="card-number" id="card-number" placeholder="Debit/Credit Card Number" required>
+
+                  <input class="col-sm-2" type="text" maxlength="4" pattern="\d{4}" title="First four digits" required>
+				  <input class="col-sm-2 col-sm-offset-1" type="text" maxlength="4" pattern="\d{4}" title="Second four digits" required> 
+				  <input class="col-sm-2 col-sm-offset-1" type="text" maxlength="4" pattern="\d{4}" title="Third four digits" required>
+                  <input class="col-sm-2 col-sm-offset-1" type="text" maxlength="4" pattern="\d{4}" title="Fourth four digits" required>
 			</div>
-		</div>
-		<!-- card balance input-->
-		<div class="form-group">
-			<label class="col-sm-3 control-label" for="card-balance">
-				Input balance
-			</label>
-			<div class="col-sm-9">
-				<input type="text" class="form-control" name="card-balance" id="card-balance" placeholder="How much you have in the card" required>
-			</div>
+
+
 		</div>
 		<!-- Expiration Date input-->
 		<div class="form-group">
@@ -149,8 +145,8 @@
 				<div class="row">
 
 					<div class="col-xs-4">
-						<select class="form-control col-sm-2" name="expiry-month" id="expiry-month" required>
-							<option required>Month</option>
+						<select class="form-control col-sm-2" name="expiry-month" id="expiry-month">
+							<option>Month</option>
 							<option value="01">Jan (01)</option>
 							<option value="02">Feb (02)</option>
 							<option value="03">Mar (03)</option>
@@ -166,7 +162,7 @@
 						</select>
 					</div>
 					<div class="col-xs-4">
-						<select class="form-control" name="expiry-year" required>
+						<select class="form-control" name="expiry-year">
 							<option value="13">2023</option>
 							<option value="14">2024</option>
 							<option value="15">2025</option>
@@ -190,7 +186,7 @@
 				Card CVV
 			</label>
 			<div class="col-sm-4">
-				<input type="text" class="form-control" name="cvv" id="cvv" placeholder="Security Code" required>
+				<input type="text" class="form-control" maxlength="3" pattern="\d{3}" name="cvv" id="cvv" placeholder="Security Code">
 			</div>
 		</div>
 	<!---->
