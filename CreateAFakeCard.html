@@ -29,6 +29,28 @@
                 }
             
         }
+
+    function strictInput(event)
+    	{
+			// check if input is bigger than 4
+			if (event.keyCode == 8) {
+				return true;
+			}
+			var value = document.getElementById('cardNumber').value;
+			if (event.keyCode == 32) {
+				return false;
+			}
+			if (value.length == 4) {
+				document.getElementById('cardNumber').value = value + " - ";
+			}
+			if (value.length == 11) {
+				document.getElementById('cardNumber').value = value + " - ";
+			}
+			if (value.length == 18) {
+				document.getElementById('cardNumber').value = value + " - ";
+			}
+			return true;
+    	}
     </script>
 </head>
 
@@ -73,7 +95,6 @@
 
                   </ul>
 
-
         </div><!--/.navbar-collapse -->
     </div>
 </nav>
@@ -103,9 +124,8 @@
 				</select>
 			</div>
 			<div class="col-xs-6">
-				<input type="text" class="form-control" pattern="\w+ \w+.*" name="card-holder-name" id="card-holder-name" placeholder="E.g David Yao" required>	
-			</div>
-			
+				<input type="text" class="form-control" maxlength="30" pattern="[A-Za-z]{1,} [A-Za-z]{1,}" name="card-holder-name" id="card-holder-name" placeholder="E.g David Yao" title="FirstName LastName" required>	
+			</div>		
 		</div>
 
 		<!-- card type input-->
@@ -129,10 +149,9 @@
 				Balance
 			</label>
 			<div class="col-sm-9">
-				<input type="text" class="form-control" placeholder="balance" required />
+				<input type="text" class="form-control" pattern="^([1-9][0-9]*)+(.[0-9]{1,2})?$" placeholder="balance" title="e.g 1000.00" required />
 			</div>
 		</div>
-
 
 		<!-- card number input-->
 		<div class="form-group">
@@ -141,10 +160,7 @@
 			</label>
 			<div class="col-sm-9">
 
-                  <input class="col-sm-2" type="text" maxlength="4" pattern="\d{4}" title="First four digits" required>
-				  <input class="col-sm-2 col-sm-offset-1" type="text" maxlength="4" pattern="\d{4}" title="Second four digits" required> 
-				  <input class="col-sm-2 col-sm-offset-1" type="text" maxlength="4" pattern="\d{4}" title="Third four digits" required>
-                  <input class="col-sm-2 col-sm-offset-1" type="text" maxlength="4" pattern="\d{4}" title="Fourth four digits" required>
+                  <input class="form-control" type="text" id="cardNumber" maxlength="25" pattern="^\d{4} - \d{4} - \d{4} - \d{4}$" title="xxxx-xxxx-xxxx-xxxx" onkeydown="strictInput(event)" required>
 			</div>
 		</div>
 
